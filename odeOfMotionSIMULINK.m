@@ -22,7 +22,7 @@ function dudt = odeOfMotionSIMULINK(~,u,dragConstant)
 %% Calculate Drag magnitude
 totalVelocity = sqrt( u(2)^2 + u(4)^2);  % magnitude of total vehicle velocity
 D = dragConstant*totalVelocity^2;
-if u(4) < 0.1
+if u(4) < 0.1i
     D = 0;
 end
 
