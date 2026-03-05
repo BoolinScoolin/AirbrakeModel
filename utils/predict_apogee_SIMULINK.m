@@ -8,9 +8,6 @@ tspan = linspace(0, 200, 1000)';
 options = odeset('RelTol', 1e-4, 'Events', @landing_event_SIMULINK);
 [~, u] = ode45(@(t,u) rocket_2dof_eom_SIMULINK(t,u,airbrakeDragCharacteristics) , tspan, ic, options);
 
-%% Organize Data
-u = u*3.28084;  % convert to [ft]
-
 % Extract varibles
 apogee = max(u(:,3));  % y distance  (altitude)
 

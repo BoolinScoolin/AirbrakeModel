@@ -1,7 +1,7 @@
-function [emptyMotorMass, rocket_mass_noMotor,railCant, railLength] = defineDefaultSIMULINK()
+function [emptyMotorMass, rocket_mass_noMotor,railCant, railLength] = define_default_SIMULINK()
 
 % Define Rocket
-rocket_mass_noMotor = 581;  % vehicle mass with no motors [lb]
+rocket_mass_noMotor = 581;  % vehicle mass with no motors [oz]
 rocket_mass_noMotor = rocket_mass_noMotor*0.0283495;  % convert to [kg]
 
 % Define Launch Rail
